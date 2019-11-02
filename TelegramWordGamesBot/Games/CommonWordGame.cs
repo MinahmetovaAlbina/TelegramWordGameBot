@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelegramWordGamesBot.CommonWordGame
+namespace TelegramWordGamesBot
 {
-    class CommonWordGame : Game.Game
+    class CommonWordGame : Game
     {
         // последняя буква из слова бота
         private Dictionary<int,char> LastUsedChar { get; set; }
@@ -82,7 +82,7 @@ namespace TelegramWordGamesBot.CommonWordGame
 
         private bool IsWordRight(int userId,string text)
         {
-            var conn = DatavaseService.DatabaseConnector.GetConnection();
+            var conn = DatabaseConnector.GetConnection();
             string sql = "";
             sql = "select word.name from word, word_category,category where(word.name = '" + text + "' " +
                     "AND word.id = word_category.word_id " +
@@ -104,7 +104,7 @@ namespace TelegramWordGamesBot.CommonWordGame
 
         public override string FindWord(int userId, string pattern)
         {
-            var conn = DatavaseService.DatabaseConnector.GetConnection();
+            var conn = DatabaseConnector.GetConnection();
             string sql = "";
             sql = "select word.name from word, word_category,category where(word.name ilike '"+pattern+"%' " +
                     "AND word.id = word_category.word_id " +

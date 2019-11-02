@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System;
 
-namespace TelegramWordGamesBot.TelegramCommunicationService
+namespace TelegramWordGamesBot
 {
     class CommunicationService
     {
         public static TelegramBotClient Bot;
-        public static Dictionary<int, Game.Game> Users;
-        public static List<Game.Game> Games;
-        public static void Start(List<Game.Game> ListOfGames)
+        public static Dictionary<int, Game> Users;
+        public static List<Game> Games;
+        public static void Start(List<Game> ListOfGames)
         {
             Games = ListOfGames;
-            Users = new Dictionary<int, Game.Game>();
+            Users = new Dictionary<int, Game>();
             var wp = new HttpToSocks5Proxy("150.109.195.10", 1080);
             wp.ResolveHostnamesLocally = true;
             Bot = new TelegramBotClient("904574352:AAF6VYhJWZ7kUCKgx6l5rVQgOnfcmv45uLg", wp);

@@ -83,7 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonWordGame\CommonWordGame.cs" />
+    <Compile Include="Games\CommonWordGame.cs" />
     <Compile Include="DatabaseService\DatabaseConnector.cs" />
     <Compile Include="Game\Game.cs" />
     <Compile Include="Program.cs" />

@@ -1,7 +1,7 @@
 ﻿using Npgsql;
 
 
-namespace TelegramWordGamesBot.DatavaseService
+namespace TelegramWordGamesBot
 {
     class DatabaseConnector
     {
