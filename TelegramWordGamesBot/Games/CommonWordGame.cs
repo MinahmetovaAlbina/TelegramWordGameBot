@@ -102,7 +102,7 @@ namespace TelegramWordGamesBot
             return UsedWords[userId].Contains(text.ToLower());
         }
 
-        public override string FindWord(int userId, string pattern)
+        protected override string FindWord(int userId, string pattern)
         {
             var conn = DatabaseConnector.GetConnection();
             string sql = "";

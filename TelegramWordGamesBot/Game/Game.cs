@@ -10,7 +10,8 @@ namespace TelegramWordGamesBot
     {
         public string Name;
         public string Category;
+        //ответ игры пользователю
         public abstract string Answer(int userId, string message);
-        public abstract string FindWord(int userId, string pattern);
+        protected abstract string FindWord(int userId, string pattern);
     }
 }

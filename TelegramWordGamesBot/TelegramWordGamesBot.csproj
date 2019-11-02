@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="Games\CommonWordGame.cs" />
     <Compile Include="DatabaseService\DatabaseConnector.cs" />
+    <Compile Include="Games\FindWordsinWordGame.cs" />
     <Compile Include="Game\Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
